@@ -3,6 +3,10 @@ import Login from '../../pageElements/Login'
 import Home from '../../pageElements/Home'
 
 describe("login functionality", () => {
+
+  const username = Cypress.env('username');
+  const password = Cypress.env('password');
+
   beforeEach(() => {
     cy.visit("/");
   });
@@ -15,18 +19,11 @@ describe("login functionality", () => {
   });
 
   it("logins to webstore", () => {
-    Login.elements.fillEmail('bob@inbox.lv');
-    Login.elements.passwordInput().should('be.visible').type("password");
-    Login.elements.signInButton().click();
-    Home.elements.headerLink().contains('Store of Excellence');
-    Home.elements.productLink().should('have.length', 4);
-    Global.navigateSideBar.openPage("Store");
+    cy.login(username, password);
   });
 
   it("invalid login", () => {
-    Login.elements.emailInput().should('be.visible').type('fake@notreal.com');
-    Login.elements.passwordInput().should('be.visible').type('fakepass');
-    Login.elements.signInButton().click();
+    cy.login('fake@notreal.com', 'fakepass');
     cy.contains("Error: Wrong email or password");
   });
 });
