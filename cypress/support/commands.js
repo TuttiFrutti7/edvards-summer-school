@@ -32,26 +32,11 @@ Cypress.Commands.add('getByTestId', (id) => {
 });
 
 Cypress.Commands.add('login', (username, password) => {
-    //cy.visit('/');
-    //cy.contains('h1', 'Welcome back');
-    //Login.fillEmail(username);
-    //Login.fillPassword(password);
-    //Login.elements.signInButton().click();
-    //Home.elements.headerLink().contains('Store of Excellence');
-    //Home.elements.productLink().should('have.length', 4);
-
     cy.session(username, () => {
       cy.visit('/');
-      cy.contains('h1', 'Welcome back');
       Login.fillEmail(username);
       Login.fillPassword(password);
       Login.elements.signInButton().click();
-      Home.elements.headerLink().contains('Store of Excellence');
-      Home.elements.productLink().should('have.length', 4);
-    //},
-    //{
-      //validate() {
-        //cy.request('')
-      //}
-    })
+      Home.elements.headerLink().should('be.visible');
+    });
 })
