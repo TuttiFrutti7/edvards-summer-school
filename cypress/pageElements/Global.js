@@ -10,6 +10,10 @@ class Global {
       this.elements.sideBarBurger().click();
       this.elements.sideBarLinks(pageName).click();
     },
+    logout: () => {
+      this.elements.sideBarBurger().click();
+      cy.getByTestId('logout-button').click();
+    }
   };
 }
 
