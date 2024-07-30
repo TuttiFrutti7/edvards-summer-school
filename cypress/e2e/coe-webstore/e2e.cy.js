@@ -25,6 +25,7 @@ describe('End to end functionality', () => {
       Product.elements.productOptions('XL').click();
       Product.elements.productOptions('White').click();
       Product.elements.addProductButton().should('be.enabled').click();
+      Product.elements.addProductButton().should('have.text', 'Select variant')
     });
 
     it('goes to checkout', () => {
@@ -47,8 +48,7 @@ describe('End to end functionality', () => {
       //Checkout.elements.shippingCountrySelect('lv').should('have.value', 'lv');
       //Checkout.elements.shippingEmailInput().clear().type('bob@inbox.lv');
 
-      // Trying to automate the shipping form
-      Checkout.fillShipping();
+      Checkout.fillShippingForm();
       Checkout.elements.continueToDeliveryButton().click();
 
       // the rest
