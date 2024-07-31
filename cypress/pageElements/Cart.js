@@ -18,7 +18,6 @@ class Cart {
   removeDiscount() {
     this.elements.removeDiscountButton().click();
   }
-
 }
 
 export default new Cart();
