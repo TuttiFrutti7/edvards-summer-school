@@ -1,6 +1,7 @@
 import Global from '../pageElements/Global';
 import Dashboard from '../pageElements/Dashboard';
 import Login from '../pageElements/Login';
+import Register from '../pageElements/Register';
 import Home from '../pageElements/Home';
 import Store from '../pageElements/Store';
 import Product from '../pageElements/Product';
@@ -12,6 +13,7 @@ class Pages {
     this.Global = Global;
     this.Dashboard = Dashboard;
     this.Login = Login;
+    this.Register = Register;
     this.Home = Home;
     this.Store = Store;
     this.Product = Product;

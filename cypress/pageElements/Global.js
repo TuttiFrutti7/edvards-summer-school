@@ -3,6 +3,7 @@ class Global {
     sideBarBurger: () => cy.getByTestId('nav-menu-button'),
     sideBarLinks: (pageName) =>
       cy.getByTestId('nav-menu-popup').contains('a', pageName),
+    footerLinks: () => cy.get('footer a'),
   };
 
   navigateSideBar = {

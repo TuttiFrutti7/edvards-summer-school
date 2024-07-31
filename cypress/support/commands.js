@@ -1,5 +1,5 @@
-import Login from '../pageElements/Login';
-import Home from '../pageElements/Home';
+import Login from '../pageElements/Login'
+import Home from '../pageElements/Home'
 
 // ***********************************************
 // This example commands.js shows you how to
@@ -39,4 +39,8 @@ Cypress.Commands.add('login', (username, password) => {
     Login.elements.signInButton().click();
     Home.elements.headerLink().should('be.visible');
   });
+});
+
+Cypress.Commands.add('getByHref', (link) => {
+  cy.get(`[href="${link}"]`);
 });

@@ -1,4 +1,4 @@
-import Pages from '../../support/pages';
+import Pages from '../../support/pages'
 
 // https://tdlschool.atlassian.net/jira/software/c/projects/TSS22N/boards/274?issueType=10015&selectedIssue=TSS22N-264
 describe('End to end functionality', () => {
