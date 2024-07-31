@@ -1,5 +1,5 @@
-import Login from '../pageElements/Login'
-import Home from '../pageElements/Home'
+import Login from '../pageElements/Login';
+import Home from '../pageElements/Home';
 
 // ***********************************************
 // This example commands.js shows you how to
@@ -32,11 +32,11 @@ Cypress.Commands.add('getByTestId', (id) => {
 });
 
 Cypress.Commands.add('login', (username, password) => {
-    cy.session(username, () => {
-      cy.visit('/');
-      Login.fillEmail(username);
-      Login.fillPassword(password);
-      Login.elements.signInButton().click();
-      Home.elements.headerLink().should('be.visible');
-    });
-})
+  cy.session(username, () => {
+    cy.visit('/');
+    Login.fillEmail(username);
+    Login.fillPassword(password);
+    Login.elements.signInButton().click();
+    Home.elements.headerLink().should('be.visible');
+  });
+});

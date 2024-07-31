@@ -1,7 +1,7 @@
 // Number to check
 let number = 7;
 // Store result in const
-const RESULT = number >= 0 ? "num is positive" : "num is negative";
+const RESULT = number >= 0 ? 'num is positive' : 'num is negative';
 // Print out result
 console.log(RESULT);
 

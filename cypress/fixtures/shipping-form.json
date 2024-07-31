@@ -1,0 +1,9 @@
+{
+  "shipping-first-name-input": "Bob",
+  "shipping-last-name-input": "Dragon",
+  "shipping-address-input": "Traktoru iela 34",
+  "shipping-postal-code-input": "LV-4200",
+  "shipping-city-input": "Riga",
+  "shipping-country-select": "lv",
+  "shipping-email-input": "bob@inbox.lv"
+}

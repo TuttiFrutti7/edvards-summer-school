@@ -1,8 +1,8 @@
 class Global {
   elements = {
-    sideBarBurger: () => cy.getByTestId("nav-menu-button"),
+    sideBarBurger: () => cy.getByTestId('nav-menu-button'),
     sideBarLinks: (pageName) =>
-      cy.getByTestId("nav-menu-popup").contains("a", pageName),
+      cy.getByTestId('nav-menu-popup').contains('a', pageName),
   };
 
   navigateSideBar = {
@@ -13,7 +13,7 @@ class Global {
     logout: () => {
       this.elements.sideBarBurger().click();
       cy.getByTestId('logout-button').click();
-    }
+    },
   };
 }
 
