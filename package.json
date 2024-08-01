@@ -7,8 +7,8 @@
     "format": "npx prettier . --write",
     "cypress-open": "npx cypress open",
     "cypress-run": "npx cypress run",
-    "reports-cleanup": "sudo rm -r ./mochawesome-report",
-    "screenshots-cleanup": "sudo rm -r ./cypress/screenshots"
+    "reports-cleanup": "rm -r ./mochawesome-report",
+    "screenshots-cleanup": "rm -r ./cypress/screenshots"
   },
   "keywords": [
     "cypress",
