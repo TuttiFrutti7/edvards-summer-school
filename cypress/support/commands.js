@@ -1,5 +1,5 @@
-import Login from '../pageElements/Login'
-import Home from '../pageElements/Home'
+import Login from '../pageElements/Login';
+import Home from '../pageElements/Home';
 
 // ***********************************************
 // This example commands.js shows you how to

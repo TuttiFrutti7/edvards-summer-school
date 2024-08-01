@@ -1,7 +1,6 @@
-import Pages from '../../support/pages'
+import Pages from '../../support/pages';
 
-describe('get directed to sign up', () => {
-
+// https://tdlschool.atlassian.net/jira/software/c/projects/TSS22N/boards/274?selectedIssue=TSS22N-16
     beforeEach(() => {
         cy.visit('/sign-in');
     })
