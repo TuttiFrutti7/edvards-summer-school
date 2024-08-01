@@ -10,7 +10,7 @@ class Cart {
 
   addDiscount(code) {
     this.elements.discountButton().should('be.enabled').click();
-    this.elements.discountInput().clear().type(code);
+    this.elements.discountInput().clear({ force: true }).type(code);
     this.elements.applyDiscountButton().should('be.enabled').click();
     cy.getByTestId('discount-amount').contains('(10%)');
   }
