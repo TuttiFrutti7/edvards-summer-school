@@ -1,5 +1,5 @@
 const { defineConfig } = require('cypress');
-require('dotenv').config()
+require('dotenv').config();
 
 module.exports = defineConfig({
   reporter: 'mochawesome',
@@ -7,8 +7,8 @@ module.exports = defineConfig({
     overwrite: false,
   },
   env: {
-    username: process.env.SITE_EMAIL,
-    password: process.env.SITE_PASSWORD,
+    username: 'bob@inbox.lv',
+    password: '',
   },
   e2e: {
     viewportWidth: 1920,
