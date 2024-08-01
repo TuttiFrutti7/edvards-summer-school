@@ -15,19 +15,21 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Runs a single command using the runners shell
-    - name: Checkout
-      uses: actions/checkout@v4.1.7
-    - name: Run all Cypress tests
-      uses: cypress-io/github-action@v6.5.0
-      env:
-        CYPRESS_password: ${{ secrets.CYPRESS_PASSWORD }}
-      with:
-        install: true
-        command: npm run cypress-run
-    - name: Upload report & screenshots
-      uses: actions/upload-artifact@v4.3.4
-      if: always()
-      with:
-        name: report
-        path: ./mochawesome-report
+      # Runs a single command using the runners shell
+      - name: Checkout
+        uses: actions/checkout@v4.1.7
+      - name: Run all Cypress tests
+        uses: cypress-io/github-action@v6.5.0
+        env:
+          CYPRESS_password: ${{ secrets.CYPRESS_PASSWORD }}
+        with:
+          install: true
+          command: npm run cypress-run
+      - name: Upload report & screenshots
+        uses: actions/upload-artifact@v4.3.4
+        if: always()
+        with:
+          name: report
+          path: |
+            ./cypress/screenshots
+            ./mochawesome-report

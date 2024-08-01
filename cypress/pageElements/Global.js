@@ -1,9 +1,9 @@
 class Global {
   elements = {
-    sideBarBurger: () => cy.getByTestId('nav-menu-button'),
+    sideBarBurger: () => cy.getByTestId("nav-menu-button"),
     sideBarLinks: (pageName) =>
-      cy.getByTestId('nav-menu-popup').contains('a', pageName),
-    footerLinks: () => cy.get('footer a'),
+      cy.getByTestId("nav-menu-popup").contains("a", pageName),
+    footerLinks: () => cy.get("footer a"),
   };
 
   navigateSideBar = {
@@ -13,7 +13,7 @@ class Global {
     },
     logout: () => {
       this.elements.sideBarBurger().click();
-      cy.getByTestId('logout-button').click();
+      cy.getByTestId("logout-button").click();
     },
   };
 }

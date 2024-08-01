@@ -1,12 +1,12 @@
 class Register {
   elements = {
-    firstNameInput: () => cy.getByTestId('first-name-input'),
-    lastNameInput: () => cy.getByTestId('last-name-input'),
-    emailInput: () => cy.getByTestId('email-input'),
-    phoneInput: () => cy.getByTestId('phone-input'),
-    passwordInput: () => cy.getByTestId('password-input'),
-    joinButton: () => cy.getByTestId('register-button'),
-    signInButton: () => cy.getByTestId('sign-in-button'),
+    firstNameInput: () => cy.getByTestId("first-name-input"),
+    lastNameInput: () => cy.getByTestId("last-name-input"),
+    emailInput: () => cy.getByTestId("email-input"),
+    phoneInput: () => cy.getByTestId("phone-input"),
+    passwordInput: () => cy.getByTestId("password-input"),
+    joinButton: () => cy.getByTestId("register-button"),
+    signInButton: () => cy.getByTestId("sign-in-button"),
   };
 
   fillFirstName(firstName) {

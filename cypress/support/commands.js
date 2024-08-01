@@ -1,5 +1,5 @@
-import Login from '../pageElements/Login';
-import Home from '../pageElements/Home';
+import Login from "../pageElements/Login";
+import Home from "../pageElements/Home";
 
 // ***********************************************
 // This example commands.js shows you how to
@@ -27,20 +27,20 @@ import Home from '../pageElements/Home';
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('getByTestId', (id) => {
+Cypress.Commands.add("getByTestId", (id) => {
   cy.get(`[data-testid=${id}]`);
 });
 
-Cypress.Commands.add('login', (username, password) => {
+Cypress.Commands.add("login", (username, password) => {
   cy.session(username, () => {
-    cy.visit('/');
+    cy.visit("/");
     Login.fillEmail(username);
     Login.fillPassword(password);
     Login.elements.signInButton().click();
-    Home.elements.headerLink().should('be.visible');
+    Home.elements.headerLink().should("be.visible");
   });
 });
 
-Cypress.Commands.add('getByHref', (link) => {
+Cypress.Commands.add("getByHref", (link) => {
   cy.get(`[href="${link}"]`);
 });
