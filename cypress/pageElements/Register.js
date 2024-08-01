@@ -1,12 +1,12 @@
 class Register {
   elements = {
-    firstNameInput: () => cy.getByTestId("first-name-input"),
-    lastNameInput: () => cy.getByTestId("last-name-input"),
-    emailInput: () => cy.getByTestId("email-input"),
-    phoneInput: () => cy.getByTestId("phone-input"),
-    passwordInput: () => cy.getByTestId("password-input"),
-    joinButton: () => cy.getByTestId("register-button"),
-    signInButton: () => cy.getByTestId("sign-in-button"),
+    firstNameInput: () => cy.getByTestId('first-name-input'),
+    lastNameInput: () => cy.getByTestId('last-name-input'),
+    emailInput: () => cy.getByTestId('email-input'),
+    phoneInput: () => cy.getByTestId('phone-input'),
+    passwordInput: () => cy.getByTestId('password-input'),
+    joinButton: () => cy.getByTestId('register-button'),
+    signInButton: () => cy.getByTestId('sign-in-button'),
   };
 
   fillFirstName(firstName) {
@@ -28,14 +28,6 @@ class Register {
   fillPassword(password) {
     this.elements.passwordInput().clear().type(password);
   }
-
-  //fillRegisterForm(firstName, lastName, email, phone, password) {
-  //this.elements.firstNameInput().clear().type(firstName);
-  //this.elements.lastNameInput().clear().type(lastName);
-  //this.elements.emailInput().clear().type(email);
-  //this.elements.phoneInput().clear().type(phone);
-  //this.elements.passwordInput().clear().type(password);
-  //};
 }
 
 export default new Register();

@@ -26,7 +26,7 @@ class Person {
 
 module.exports = Person;
 
-let edvards = new Person("Edvards", "Kalve", 20, "Jobless", true);
+let edvards = new Person('Edvards', 'Kalve', 20, 'Jobless', true);
 edvards.introduce();
 edvards.wakeUp();
 console.log(edvards.isSleeping);

@@ -1,4 +1,4 @@
-const NAME = "Edvards";
+const NAME = 'Edvards';
 let age;
 
 age = 20;
