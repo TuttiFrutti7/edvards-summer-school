@@ -7,7 +7,7 @@ module.exports = defineConfig({
   },
   env: {
     username: 'bob@inbox.lv',
-    password: 'password',
+    password: '',
   },
   e2e: {
     viewportWidth: 1920,
