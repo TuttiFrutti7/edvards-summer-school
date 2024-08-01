@@ -1,6 +1,6 @@
 import Pages from '../../support/pages';
 
-//https://tdlschool.atlassian.net/jira/software/c/projects/TSS22N/boards/274?selectedIssue=TSS22N-19
+// https://tdlschool.atlassian.net/jira/software/c/projects/TSS22N/boards/274?selectedIssue=TSS22N-19
 describe('Sign in with not registered email and password', () => {
   beforeEach(() => {
     cy.visit('/');

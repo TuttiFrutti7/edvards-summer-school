@@ -1,7 +1,7 @@
 import Pages from '../../support/pages';
 
-//https://tdlschool.atlassian.net/browse/TSS22N-38
-describe('login functionality', () => {
+// https://tdlschool.atlassian.net/browse/TSS22N-38
+describe('log in with a created user', () => {
   const USERNAME = Cypress.env('username');
   const PASSWORD = Cypress.env('password');
 
